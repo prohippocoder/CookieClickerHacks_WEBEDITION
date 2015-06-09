@@ -1,5 +1,11 @@
 # Cheats for Cookie Clicker
 
+### If you dont want the "Cheated cookies tase awful" achivement use this
+/*Game.goldenCookie.wrath = 0;*/
+Game.goldenCookie.time = Game.goldenCookie.minTime;
+Game.goldenCookie.life = 0;
+Game.goldenCookie.spawn();
+
 ### Set Cookie Ammount
 Game.cookies = Game.cookiesEarned + ammount;
 
@@ -37,3 +43,20 @@ var autoClicker = function(clicksAtOnce, repeatInterval) {
     return setInterval(intoTheAbyss, repeatInterval);
 };
 autoClicker(<amount of clicks>, <milliseconds interval>);
+
+### Free Buildings
+Game.ObjectsById.forEach(function (e) {
+    e.basePrice = 0;
+    e.refresh();
+});
+Game.storeToRebuild = 1;
+
+### Original building Price
+Game.priceIncrease = 1;
+Game.ObjectsById.forEach(function (e) {
+     e.refresh();
+});
+Game.storeToRebuild = 1;
+
+### little note
+http://bfy.tw/FEM
